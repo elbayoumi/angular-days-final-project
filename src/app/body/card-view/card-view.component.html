@@ -1,0 +1,14 @@
+<img [src]="productUser.image" class="card-img-top" style="width: 100%; display: block;" [alt]="productUser.name">
+<div class="card-body">
+  <h5 class="card-title" style="height: 4.5rem;">{{productUser.name}} </h5>
+  <div>
+    <p [ngStyle]="{'background-color':productUser.rate>3?'green':'red'}" class="rounded text-center text-light">Rait {{productUser.rate}}</p>
+  <div class="font-weight-light text-capitalize" *ngFor="let review of productUser.reviews"  ><p>{{review}} </p></div></div>
+  <p> count :{{productUser.count}}</p>
+  <!-- <p class="font-weight-light text-capitalize">{{productUser.reviews}}</p> -->
+  <button [ngClass]="productUser.count<=0?'btn btn-danger mb-5':'btn btn-primary mb-5' " [ngStyle]="{'cursor':productUser.count<=0?'not-allowed':'allowed' ,'text-decoration':productUser.count<=0? 'line-through':'inherit' }"  [routerLink]="['product-card',productUser.id]">View</button>
+  <button [ngClass]="productUser.count<=0?'btn btn-danger mb-5':'btn btn-primary mb-5' " [ngStyle]="{'cursor':productUser.count<=0?'not-allowed':'allowed' ,'text-decoration':productUser.count<=0? 'line-through':'inherit' }"  (click)="showCard()">add to cart</button>
+  <p class="text-center">{{':' +productUser.price | converter }} ج.م</p>
+  <p class="text-center">{{productUser.createdAt|date:'M/d/yy'}}</p>
+
+</div>

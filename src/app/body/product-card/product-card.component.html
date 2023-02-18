@@ -1,0 +1,27 @@
+<div class="cards row" >
+  <div class="card col-md-12 col-12">
+<img [src]="productView.image" class="card-img-top" style="width: 25%; display: block;" [alt]="productView.name">
+<div class="card-body">
+  <h5 class="card-title" style="height: 4.5rem;">{{productView.name}} </h5>
+  <div>
+    <p [ngStyle]="{'background-color':productView.rate>3?'green':'red'}" class="rounded text-center text-light">Rait {{productView.rate}}</p>
+  <div class="font-weight-light text-capitalize" *ngFor="let review of productView.reviews"  ><p>{{review}} </p></div></div>
+  <p> count :{{productView.count}}</p>
+  <!-- <p class="font-weight-light text-capitalize">{{productView.reviews}}</p> -->
+  <button [ngClass]="productView.count<=0?'btn btn-danger mb-5':'btn btn-primary mb-5' " [ngStyle]="{'cursor':productView.count<=0?'not-allowed':'allowed' ,'text-decoration':productView.count<=0? 'line-through':'inherit' }"  (click)="goToHome()">Back To Cards</button>
+  <button [ngClass]="productView.count<=0?'btn btn-danger mb-5':'btn btn-primary mb-5' " [ngStyle]="{'cursor':productView.count<=0?'not-allowed':'allowed' ,'text-decoration':productView.count<=0? 'line-through':'inherit' }"  (click)="showCard()">add to cart</button>
+
+  <p class="text-center">{{':' +productView.price | converter }} ج.م</p>
+  <p class="text-center">{{productView.createdAt|date:'M/d/yy'}}</p>
+<!-- /////////////////////////// -->
+
+
+<!-- //////////////////////////////////// -->
+</div>
+</div>
+</div>
+<!-- <div class="cards row" >
+  <div class="card col-md-3 col-12" style="width: 17.3rem;" *ngFor="let product of products">
+<app-card-view [productUser]="product"></app-card-view>
+  </div>
+</div> -->
