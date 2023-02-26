@@ -11,7 +11,8 @@ import { CartComponent } from './body/cart/cart.component';
 import { ToEgPipe } from './pipe/to-eg.pipe';
 import { ProductCardComponent } from './body/product-card/product-card.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FormsModule } from '@angular/forms'; // for tow way binding
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './body/login/login.component'; // for tow way binding
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms'; // for tow way binding
     CartComponent,
     ToEgPipe,
     ProductCardComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

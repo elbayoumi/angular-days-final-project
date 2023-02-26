@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  hisName: string ='mohamed';
 name : string = 'two way binding forms';
 search : string = 'search';
 }

@@ -5,7 +5,7 @@ import { CardViewComponent } from './body/card-view/card-view.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductCardComponent } from './body/product-card/product-card.component';
 import { CartComponent } from './body/cart/cart.component';
-
+import { LoginComponent } from './body/login/login.component';
 const routes: Routes = [
 {
   path: '',
@@ -22,6 +22,10 @@ const routes: Routes = [
 },{
   path:'cart/:id',
   component: CartComponent,
+},
+{
+  path:'login',
+  component: LoginComponent,
 },
 {
   path: 'errrrr',
