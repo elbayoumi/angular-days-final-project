@@ -1,5 +1,5 @@
 <img [src]="productUser.image" class="card-img-top" style="width: 100%; display: block;" [alt]="productUser.name">
-<div class="card-body">
+<div class="card-body m-1">
   <h5 class="card-title" style="height: 4.5rem;">{{productUser.name}} </h5>
   <div>
     <p [ngStyle]="{'background-color':productUser.rate>3?'green':'red'}" class="rounded text-center text-light">Rait {{productUser.rate}}</p>
